@@ -78,7 +78,7 @@ namespace SimulationOfLife
                         newField[x, y] = field[x, y]; // Клетка остается жить. Изменений нет
 
                     if (hasLife)
-                        graphics.FillRectangle(Brushes.Crimson, x * resolution, y * resolution, resolution, resolution); // Отрисовка прямоугольника. В качестве отступов - индекс массива * разрешение
+                        graphics.FillRectangle(Brushes.Crimson, x * resolution, y * resolution, resolution -1, resolution -1); // Отрисовка прямоугольника. В качестве отступов - индекс массива * разрешение
                 }
             }
             field = newField; // Пересоздание массива с новыми данными
