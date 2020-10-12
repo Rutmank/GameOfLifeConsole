@@ -19,14 +19,13 @@ namespace SimulationOfLife
         private int rows;
         private int cols;
 
-
         public Form1()
         {
             InitializeComponent();
             
         }
 
-        private void StartGame()
+        private void Start()
         {
 
             if (timer1.Enabled) // после нажатия кнопки, возможность регулировать параметры блокируется
@@ -106,7 +105,7 @@ namespace SimulationOfLife
             return count;
         }
 
-        private void StopGame() // Остановка таймера по кнопке. Доступ к изменению параметров
+        private void Stop() // Остановка таймера по кнопке. Доступ к изменению параметров
         {
             if (!timer1.Enabled)
                 return;
@@ -128,12 +127,12 @@ namespace SimulationOfLife
 
         private void bStart_Click(object sender, EventArgs e)
         {
-            StartGame();
+            Start();
         }
 
         private void bStop_Click(object sender, EventArgs e)
         {
-            StopGame();
+            Stop();
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -145,7 +144,7 @@ namespace SimulationOfLife
             {
                 var x = e.Location.X / resolution;
                 var y = e.Location.Y / resolution;
-                var validationPassed = ValidateMousePosition(x, y);
+                var validationPassed = ValidateMouse(x, y);
                 if (validationPassed)
                     field[x, y] = true;
             }
@@ -154,13 +153,13 @@ namespace SimulationOfLife
             {
                 var x = e.Location.X / resolution;
                 var y = e.Location.Y / resolution;
-                var validationPassed = ValidateMousePosition(x, y);
+                var validationPassed = ValidateMouse(x, y);
                 if (validationPassed)
                     field[x, y] = false;
             }
         }
 
-        private bool ValidateMousePosition(int x, int y) // Валидатор мыши 
+        private bool ValidateMouse(int x, int y) // Валидатор мыши 
         {
             return x >= 0 && y >= 0 && x < cols && y < rows;
         }
