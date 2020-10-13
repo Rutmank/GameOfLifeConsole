@@ -19,7 +19,6 @@ namespace SimulationOfLife
         public Form1()
         {
             InitializeComponent();
-            
         }
 
         private void Start()
@@ -114,10 +113,5 @@ namespace SimulationOfLife
                 gameEngine.DelCell(x, y);
             }
         }
-
-
-        
-
-
     }
 }
