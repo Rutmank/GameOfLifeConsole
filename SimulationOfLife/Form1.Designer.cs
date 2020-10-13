@@ -98,6 +98,11 @@
             // nudDensity
             // 
             this.nudDensity.Location = new System.Drawing.Point(24, 92);
+            this.nudDensity.Maximum = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
             this.nudDensity.Minimum = new decimal(new int[] {
             2,
             0,
@@ -108,7 +113,7 @@
             this.nudDensity.TabIndex = 3;
             this.nudDensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudDensity.Value = new decimal(new int[] {
-            2,
+            25,
             0,
             0,
             0});
@@ -178,9 +183,8 @@
             this.ClientSize = new System.Drawing.Size(1344, 594);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Game";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
