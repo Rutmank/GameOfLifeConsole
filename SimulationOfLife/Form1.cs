@@ -48,7 +48,7 @@ namespace SimulationOfLife
 
         private void DrawNextGeneration() // Генерация нового поколения
         {
-            graphics.Clear(Color.SeaGreen); // Заливка цвета поля
+            graphics.Clear(Color.Black); // Заливка цвета поля
 
             var field = gameEngine.GetCurrentGeneration();
 
